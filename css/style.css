@@ -8,12 +8,160 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
 
 ul {
   list-style: none;
+}
+
+/*header*/
+.header-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  position: relative;
+}
+
+/*menu*/
+.menu {
+  display: flex;
+  align-items: center;
+  transition: all .4s;
+}
+
+.menu li + li {
+  margin-left: 20px;
+}
+
+.menu li a {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1em;
+  color: #4D70FF;
+  padding: 10px;
+  transition: all .4s;
+}
+
+.menu li a:hover {
+  color: #8099FF;
+}
+
+.btn-produtos {
+  border: 2px solid #FFE640;
+  border-radius: 5px;
+}
+
+.header-container label, input {
+  display: none;
+}
+
+/*menu hamburguer*/
+@media (max-width: 760px) {
+  .menu li + li {
+    margin: 0;
+  }
+
+  .menu {
+    position: absolute;
+    top: -500%;
+    right: 20px;
+    flex-direction: column;
+    background: #4D70FF;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .menu li a {
+    color: white;
+  }
+
+  .menu li a:hover {
+    color: #8099FF;
+  }
+
+  .menu li:first-child {
+    margin: 10px 0 20px 0;
+  }
+
+  .menu li + li:before {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 2px;
+    background: #8099FF;
+    margin: 10px auto;
+  }
+
+  .header-container label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #4D70FF;
+    border-radius: 100%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .header-container label span {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: white;
+    top: 19.5px;
+    transition: all .4s;
+  }
+
+  .header-container label span:nth-child(1) {
+    top: 14.5px;
+    transition: all .4s;
+  }
+
+  .header-container label span:nth-child(3) {
+    top: 24.5px;
+    transition: all .4s;
+  }
+
+  @keyframes lado {
+    from {
+      left: 0;
+      background: transparent;
+    }
+
+    to {
+      left: -100%;
+    }
+  }
+
+  .header-container input:checked ~ label span:nth-child(2) {
+    left: -100%;
+    animation: lado .4s alternate;
+  }
+
+  .header-container input:checked ~ label span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 19.5px;
+  }
+
+  .header-container input:checked ~ label span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 19.5px;
+  }
+
+  .header-container input:checked ~ .menu {
+    top: 100%;
+  }
 }
 
 
