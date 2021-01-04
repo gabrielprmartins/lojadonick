@@ -101,13 +101,14 @@ ul {
 
   .menu {
     position: absolute;
-    top: -500%;
+    top: -380%;
     right: 20px;
     flex-direction: column;
     background: #4D70FF;
     padding: 20px 10px;
     border-radius: 3px;
     text-align: center;
+    opacity: 0;
   }
 
   .menu li a {
@@ -199,6 +200,7 @@ ul {
 
   .header input:checked ~ .menu {
     top: 100%;
+    opacity: 1;
   }
 }
 
