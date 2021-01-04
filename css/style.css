@@ -296,7 +296,7 @@ ul {
   background: #3E64FF;
   border-radius: 20px;
   padding: 0px;
-  box-shadow: 3px 3px 2px rgba(77,112,255,.11);
+  box-shadow: 3px 3px 4px rgba(77,112,255,.20);
   position: relative;
 }
 
@@ -312,7 +312,7 @@ ul {
   border-radius: 20px;
   max-width: 210px;
   padding: 60px 30px;
-  box-shadow: -3px 3px 2px rgba(77,112,255,.11);
+  box-shadow: -3px 3px 4px rgba(77,112,255,.20);
   display: grid;
   align-content: center;
   position: relative;
@@ -350,6 +350,7 @@ ul {
   cursor: pointer;
   text-transform: uppercase;
   font-size: 0.75em;
+  transition: all .1s;
 }
 
 .promocoes form article img {
@@ -357,11 +358,13 @@ ul {
   border-radius: 50%;
   margin: 0 auto;
   transition: all .4s;
-  border: 6px solid #EDF1FF;
+  border: 6px solid transparent;
 }
 
 .promocoes form article input[type="radio"]:checked ~ label span {
   color: #3E64FF;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.1em;
 }
 
 .promocoes form article input[type="radio"]:checked ~ label img {
@@ -462,41 +465,6 @@ ul {
     left: 0;
   }
 
-}
-
-/* focar na ideia de fazer uma janelinha para aplicar os descontos no responsivo */
-
-/* 
-/*produtos responsivo
-@media (max-width: 1032px) {
-  .promocoes {
-    flex-direction: row;
-    background: #EDF1FF;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: -3px 3px 2px rgba(77,112,255,.11);
-    max-width: 100%;
-    overflow-x: scroll;
-    border-radius: 0px;
-  }
-
-  .promocoes form article img {
-    display: flex;
-  }
-
-  .promocoes form {
-    display: flex;
-    margin: 0 auto;
-  }
-
-  .aviso {
-    display: none;
-  }
-
-  /* .aviso {
-    position: absolute;
-    top: 100%;
-  } 
 }
 
 /*
