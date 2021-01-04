@@ -427,7 +427,7 @@ ul {
     transform: rotate(90deg);
     position: absolute;
     right: -89px;
-    top: 100px;
+    top: 80px;
     cursor: pointer;
     border-radius: 20px 20px 0 0;
   }
