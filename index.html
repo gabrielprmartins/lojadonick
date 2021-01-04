@@ -10,8 +10,8 @@
 </head>
 <body>
   <!--header-->
-  <header class="header">
-    <div class="header-container">
+  <header class="header-bg">
+    <div class="header container">
       <!--logo-->
       <img src="assets/logo/logo.svg" alt="Loja do NickGamerBr01">
 
@@ -20,7 +20,7 @@
         <input type="checkbox" name="menu-hamburguer" id="menu-hamburguer">
         <label for="menu-hamburguer"><span></span><span></span><span></span></label>
         <ul class="menu">
-          <li><a class="btn-produtos" href="#">Produtos</a></li>
+          <li><a class="btn-produtos" href="#produtos">Produtos</a></li>
           <li><a href="#">Como funciona?</a></li>
           <li><a href="#">Sobre mim</a></li>
         </ul>
@@ -29,11 +29,11 @@
   </header>
 
   <!--intro-->
-  <section class="intro">
-    <div class="intro-container">
+  <section class="intro-bg">
+    <div class="intro container">
       <!--intro título-->
       <div class="intro-titulo">
-        <strong>Skyblock</strong>
+        <strong class="sub">Skyblock</strong>
         <h1>O <span>melhor</span> site <br> de vendas da <br> RedeSky</h1>
         <div class="intro-info">
           <img src="assets/icones/pato.png" alt="NickGamerBr01">
@@ -46,6 +46,66 @@
       <!--intro imagem-->
       <div class="intro-imagem">
         <img src="assets/fotos/picareta.png">
+      </div>
+    </div>
+  </section>
+
+  <!--produtos-->
+  <section class="produtos-bg" id="produtos">
+    <div class="produtos container">
+      <!--promoções-->
+      <input type="checkbox" name="abrir-promocoes" id="abrir-promocoes" class="abrir-promocoes">
+      <div class="promocoes">
+        <label for="abrir-promocoes" class="btn-promocoes"><span></span><span></span></label>
+        <strong class="sub">Promoções</strong>
+        <h2>Aplicar descontos</h2>
+
+        <form>
+          <article>
+            <input type="radio" name="desconto" id="membro" checked>
+            <label for="membro">
+            <span>0%</span>
+            <img src="assets/categorias/steve.png" alt="Membro">
+            <span>Membro</span>
+            </label>
+          </article>
+
+          <article>
+            <input type="radio" name="desconto" id="vip">
+            <label for="vip">
+            <span>10%</span>
+            <img src="assets/categorias/esqueleto.png" alt="Membro">
+            <span>Vip</span>
+            </label>
+          </article>
+
+          <article>
+            <input type="radio" name="desconto" id="mvp">
+            <label for="mvp">
+            <span>20%</span>
+            <img src="assets/categorias/enderman.png" alt="Membro">
+            <span>Mvp</span>
+            </label>
+          </article>
+
+          <article>
+            <input type="radio" name="desconto" id="mvpmais">
+            <label for="mvpmais">
+            <span>30%</span>
+            <img src="assets/categorias/creeper.png" alt="Membro">
+            <span>Mvp+</span>
+            </label>
+          </article>
+        </form>
+
+        <div class="aviso">
+          <strong class="sub sub-aviso">Fique ligado</strong>
+          <p>Todo final de semana haverá descontos de <span>5%</span> para os membros!</p>
+        </div>
+      </div>
+      <!--vitrine-->
+      <div class="vitrine">
+        
       </div>
     </div>
   </section>

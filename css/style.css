@@ -8,10 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  overflow: hidden;
-}
-
 a {
   text-decoration: none;
 }
@@ -20,11 +16,45 @@ ul {
   list-style: none;
 }
 
-/*header*/
-.header-container {
+/*container*/
+.container {
   margin: 0 auto;
   max-width: 1200px;
   padding: 0 20px;
+}
+
+/*sub*/
+.sub {
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #7BBD00;
+  margin-bottom: 20px;
+}
+
+.sub::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 12px;
+  background: #7BBD00;
+  margin-right: 6px;
+}
+
+@media (max-width: 480px) {
+  .sub {
+    font-size: 0.75em;
+  }
+  
+  .sub::before {
+    width: 3px;
+    height: 8px;
+  }
+}
+
+
+/*header*/
+.header {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
@@ -59,7 +89,7 @@ ul {
   border-radius: 5px;
 }
 
-.header-container label, input {
+.header label, input {
   display: none;
 }
 
@@ -74,7 +104,7 @@ ul {
     top: -500%;
     right: 20px;
     flex-direction: column;
-    background: rgba(77,112,255,.9);
+    background: #4D70FF;
     padding: 20px 10px;
     border-radius: 3px;
     text-align: center;
@@ -105,7 +135,7 @@ ul {
     margin: 10px auto;
   }
 
-  .header-container label {
+  .header label {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,7 +148,7 @@ ul {
     overflow: hidden;
   }
 
-  .header-container label span {
+  .header label span {
     position: absolute;
     width: 20px;
     height: 2px;
@@ -127,17 +157,17 @@ ul {
     transition: all .4s;
   }
 
-  .header-container label span:nth-child(1) {
+  .header label span:nth-child(1) {
     top: 14.5px;
     transition: all .4s;
   }
 
-  .header-container label span:nth-child(3) {
+  .header  label span:nth-child(3) {
     top: 24.5px;
     transition: all .4s;
   }
 
-  .header-container label:hover span {
+  .header label:hover span {
     background:  #FFE640;
   }
 
@@ -152,50 +182,31 @@ ul {
     }
   }
 
-  .header-container input:checked ~ label span:nth-child(2) {
+  .header input:checked ~ label span:nth-child(2) {
     left: -100%;
     animation: lado .4s alternate;
   }
 
-  .header-container input:checked ~ label span:nth-child(1) {
+  .header input:checked ~ label span:nth-child(1) {
     transform: rotate(45deg);
     top: 19.5px;
   }
 
-  .header-container input:checked ~ label span:nth-child(3) {
+  .header input:checked ~ label span:nth-child(3) {
     transform: rotate(-45deg);
     top: 19.5px;
   }
 
-  .header-container input:checked ~ .menu {
+  .header input:checked ~ .menu {
     top: 100%;
   }
 }
 
 /*intro*/
-.intro-container {
-  margin: 60px auto;
-  max-width: 1200px;
+.intro {
+  margin: 60px auto 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  padding: 0 20px;
-}
-
-/*intro sub*/
-.intro-titulo > strong {
-  font-family: 'Nunito', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #7BBD00;
-}
-
-.intro-titulo > strong:before {
-  content: '';
-  display: inline-block;
-  width: 4px;
-  height: 12px;
-  background: #7BBD00;
-  margin-right: 6px;
 }
 
 /*intro titulo*/
@@ -237,7 +248,7 @@ ul {
 
 /*intro responsivo*/
 @media (max-width: 1032px) {
-  .intro-container {
+  .intro {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -247,7 +258,7 @@ ul {
 }
 
 @media (max-width: 820px) {
-  .intro-container {
+  .intro {
     grid-template-columns: 1fr;
     margin: 30px auto;
   }
@@ -277,26 +288,216 @@ ul {
   .intro-imagem img {
     max-width: 280px;
   }
+}
 
-  .intro-titulo > strong {
-    font-family: 'Nunito', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #7BBD00;
-    font-size: 0.75em;
-  }
-  
-  .intro-titulo > strong:before {
-    content: '';
-    display: inline-block;
-    width: 3px;
-    height: 8px;
-    background: #7BBD00;
-    margin-right: 6px;
+/*produtos*/
+.produtos {
+  margin: 60px auto;
+  background: #3E64FF;
+  border-radius: 20px;
+  padding: 0px;
+  box-shadow: 3px 3px 2px rgba(77,112,255,.11);
+  position: relative;
+}
+
+@media (max-width: 1250px) {
+  .produtos {
+    margin: 30px 20px;
   }
 }
 
+/*promoções*/
+.promocoes {
+  background: #EDF1FF;
+  border-radius: 20px;
+  max-width: 210px;
+  padding: 60px 30px;
+  box-shadow: -3px 3px 2px rgba(77,112,255,.11);
+  display: grid;
+  align-content: center;
+  position: relative;
+}
 
+.promocoes strong, h2 {
+  text-align: center;
+}
+
+.promocoes h2 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 2.125em;
+  color: #3E64FF;
+  line-height: 1;
+}
+
+/*promoções itens*/
+.promocoes form {
+  margin: 0px auto 100px auto;
+}
+
+.promocoes form article {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promocoes form article span {
+  font-family: 'Nunito', sans-serif;
+  display: block;
+  text-align: center;
+  color: #45464D;
+  margin: 6px auto;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+
+.promocoes form article img {
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: all .4s;
+  border: 6px solid #EDF1FF;
+}
+
+.promocoes form article input[type="radio"]:checked ~ label span {
+  color: #3E64FF;
+}
+
+.promocoes form article input[type="radio"]:checked ~ label img {
+  border: 6px solid #3E64FF;
+}
+
+/*promoções aviso*/
+.aviso {
+  align-self: end;
+  text-align: center;
+}
+
+.aviso p {
+  margin: 20px auto;
+  font-family: 'Nunito', sans-serif;
+  color: #3E64FF;
+  font-size: 1.25em;
+}
+
+.aviso span {
+  color: #FFBD24;
+}
+
+ .btn-promocoes, .abrir-promocoes {
+  display: none;
+} 
+
+/*produtos responsivo*/
+@media (max-width: 1032px) {
+  .produtos {
+    margin: 30px 0px;
+    border-radius: 0px;
+  }
+
+  .promocoes {
+    position: relative;
+    left: -230px;
+    transition: all .4s;
+    border-radius: 0 20px 20px 0;
+    padding: 30px 10px;
+  }
+
+  .promocoes h2 {
+    font-size: 1.875em;
+  }
+
+  .aviso p {
+    font-size: 1em;
+  }
+
+  .btn-promocoes {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    background: #FFBD24;
+    width: 138px;
+    height: 40px;
+    color: #3E64FF;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+    position: absolute;
+    right: -89px;
+    top: 100px;
+    cursor: pointer;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .btn-promocoes span {
+    background: #3E64FF;
+    transition: all .4s;
+    display: block;
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .promocoes .btn-promocoes span:nth-child(1) {
+    transform: rotate(-30deg);
+    left: 42px;
+  }
+
+  .promocoes .btn-promocoes span:nth-child(2) {
+    transform: rotate(30deg);
+    right: 42px;
+  }
+
+  .abrir-promocoes:checked ~ .promocoes .btn-promocoes span:nth-child(1) {
+    transform: rotate(30deg);
+  }
+
+  .abrir-promocoes:checked ~ .promocoes .btn-promocoes span:nth-child(2) {
+    transform: rotate(-30deg);
+  }
+
+
+  .abrir-promocoes:checked ~ .promocoes {
+    left: 0;
+  }
+
+}
+
+/* focar na ideia de fazer uma janelinha para aplicar os descontos no responsivo */
+
+/* 
+/*produtos responsivo
+@media (max-width: 1032px) {
+  .promocoes {
+    flex-direction: row;
+    background: #EDF1FF;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: -3px 3px 2px rgba(77,112,255,.11);
+    max-width: 100%;
+    overflow-x: scroll;
+    border-radius: 0px;
+  }
+
+  .promocoes form article img {
+    display: flex;
+  }
+
+  .promocoes form {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .aviso {
+    display: none;
+  }
+
+  /* .aviso {
+    position: absolute;
+    top: 100%;
+  } 
+}
 
 /*
 font-family: 'Nunito', sans-serif;
