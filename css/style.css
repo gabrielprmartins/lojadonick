@@ -102,13 +102,15 @@ ul {
   .menu {
     position: absolute;
     top: -380%;
+    left: 20px;
     right: 20px;
     flex-direction: column;
-    background: #4D70FF;
+    background: #3E64FF;
     padding: 20px 10px;
     border-radius: 3px;
     text-align: center;
     opacity: 0;
+    box-shadow: 4px 4px 4px rgba(0,0,0,.1);
   }
 
   .menu li a {
@@ -147,6 +149,7 @@ ul {
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.1);
   }
 
   .header label span {
@@ -300,6 +303,9 @@ ul {
   padding: 0px;
   box-shadow: 3px 3px 4px rgba(77,112,255,.20);
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 30px;
 }
 
 @media (max-width: 1250px) {
@@ -365,12 +371,14 @@ ul {
 
 .promocoes form article input[type="radio"]:checked ~ label span {
   color: #3E64FF;
+  transform: scale(1.3);
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.1em;
+
 }
 
 .promocoes form article input[type="radio"]:checked ~ label img {
   border: 6px solid #3E64FF;
+  transform: scale(1.09);
 }
 
 /*promoções aviso*/
@@ -397,12 +405,16 @@ ul {
 /*produtos responsivo*/
 @media (max-width: 1032px) {
   .produtos {
+    grid-template-columns: 1fr;
+  }
+
+  .produtos {
     margin: 30px 0px;
     border-radius: 0px;
   }
 
   .promocoes {
-    position: relative;
+    position: absolute;
     left: -230px;
     transition: all .4s;
     border-radius: 0 20px 20px 0;
@@ -467,6 +479,19 @@ ul {
     left: 0;
   }
 
+  .abrir-promocoes:checked ~ .vitrine {
+    /* background-color: #194E4E; */
+  }
+}
+
+/*vitrine*/
+.vitrine {
+  margin: 0 auto;
+  background: red;
+  padding: 20px;
+  margin: 0;
+  bottom: 0;
+/*terminar vitrine*/
 }
 
 /*
