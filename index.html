@@ -56,8 +56,8 @@
       <!--promoções-->
       <input type="checkbox" name="abrir-promocoes" id="abrir-promocoes" class="abrir-promocoes">
       <div class="promocoes">
-        <label for="abrir-promocoes" class="btn-promocoes"><span></span><span></span></label>
-        <strong class="sub">Promoções</strong>
+        <label for="abrir-promocoes" class="btn-promocoes"><span>%</span><span>Descontos</span><span><img src="assets/icones/descontos.svg"></span></label>
+        <strong class="sub"><span>Promoções</span></strong>
         <h2>Aplicar descontos</h2>
 
         <form>
@@ -105,8 +105,48 @@
       </div>
       <!--vitrine-->
       <div class="vitrine">
+        <strong class="sub sub-vitrine">Vitrine</strong>
         <h2>Selecionar categoria</h2>
+        
+        <!--categorias-->
+        <div class="categorias">
+          <ul class="categorias-lista">
+            <li>
+              <input type="radio" name="tabelas" id="tabela-1" checked>
+              <label for="tabela-1">Itens</label>
+              <!--itens-->
+              <div class="categorias-itens"></div>
+            </li>
 
+            <li>
+              <input type="radio" name="tabelas" id="tabela-2">
+              <label for="tabela-2">Itens Encantados</label>
+              <!--itens encantados-->
+              <div class="categorias-itens"></div>
+            </li>
+
+            <li>
+              <input type="radio" name="tabelas" id="tabela-3">
+              <label for="tabela-3">Armaduras</label>
+              <!--armaduras-->
+              <div class="categorias-itens"></div>
+            </li>
+
+            <li>
+              <input type="radio" name="tabelas" id="tabela-4">
+              <label for="tabela-4">Encantamentos</label>
+              <!--encantamentos-->
+              <div class="categorias-itens"></div>
+            </li>
+
+            <li>
+              <input type="radio" name="tabelas" id="tabela-5">
+              <label for="tabela-5">Minions</label>
+              <!--minions-->
+              <div class="categorias-itens"></div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
