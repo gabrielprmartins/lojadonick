@@ -434,44 +434,44 @@ ul {
   .btn-promocoes {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background: #FFBD24;
     width: 200px;
-    height: 40px;
+    height: 30px;
     color: #3E64FF;
     text-transform: uppercase;
     transform: rotate(90deg);
     position: absolute;
-    right: -120px;
+    right: -115px;
     top: 120px;
     cursor: pointer;
     border-radius: 20px 20px 0 0;
   }
 
   .btn-promocoes span {
-    font-size: 1em;
     font-family: 'Nunito', sans-serif;
+    font-size: 0.8em;
     transition: all .5s;
+    margin: 0 5px;
   }
 
   .promocoes .btn-promocoes span:nth-child(1) {
     background: #EDF1FF;
-    padding: 4px;
     border-radius: 5px; 
+    padding: 2px; 
   }
 
   .abrir-promocoes:checked ~ .promocoes .btn-promocoes span:nth-child(3) {
     transform: scaleY(-1);
   }
-/* 
-  .abrir-promocoes:checked ~ .promocoes .btn-promocoes span:nth-child(1) {
-    transform: rotate(30deg);
+
+  .btn-promocoes:hover span:nth-child(3) {
+    animation: hover-seta 1s alternate;
   }
 
-  .abrir-promocoes:checked ~ .promocoes .btn-promocoes span:nth-child(2) {
-    transform: rotate(-30deg);
-  } */
-
+  .abrir-promocoes:checked ~ .promocoes .btn-promocoes span:nth-child(3) {
+    animation: none;
+  }
 
   .abrir-promocoes:checked ~ .promocoes {
     left: 0;
@@ -487,6 +487,21 @@ ul {
   }
 }
 
+/*animação hover seta*/
+@keyframes hover-seta {
+  0% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(-1);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
 @media (max-width: 480px) {
   .produtos {
     margin: 30px 0px;
@@ -497,8 +512,7 @@ ul {
 
 /*vitrine*/
 .vitrine {
-  /* background: red; */
-  padding: 0 0 0 20px;
+  padding: 0 0 0 15px;
   margin: 60px 0;
   bottom: 0;
 }
@@ -520,9 +534,9 @@ ul {
   line-height: 1;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 760px) {
   .vitrine {
-    margin: 30px 0;
+    margin: 40px 0;
   }
 }
 
@@ -534,6 +548,7 @@ ul {
 .categorias-lista {
   margin: 20px 0px 0 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   border-radius: 20px 0 0 20px;
   background: #EDF1FF;
@@ -558,38 +573,13 @@ ul {
 }
 
 /*categorias responsivo*/
-@media (max-width: 1200px) {
+@media (max-width: 1186px) {
+  .categorias-lista li + li {
+    margin: 20px 0;
+  }
+
   .categorias-lista {
-    position: absolute;
-    overflow-x: auto;
-    overflow-y: hidden;
-  }
-
-  .categorias-lista::-webkit-scrollbar {
-    display: none;
-  } 
-}
-
-@media (max-width: 1060px) {
-  .vitrine h2::after {
-    content: '';
-    position: absolute;
-    top: 94px;
-    padding: 20px;
-    background: url(/assets/icones/mais-branco.svg) center center no-repeat;
-    opacity: 0.2;
-    animation: mais .6s alternate infinite;
-  }
-}
-
-@keyframes mais {
-  from {
-    right: 5px;
-  }
-
-  to {
-    right: 0px;
-    opacity: 0.6;
+    height: 135px;
   }
 }
 
@@ -598,16 +588,8 @@ ul {
     margin-left: 30px;
   }
 
-  .categorias-lista {
-    border-radius: 20px;
-  }
-
   .vitrine h2 {
     font-size: 1.875em;
-  }
-
-  .vitrine h2::after {
-    visibility: hidden;
   }
 
   .categorias-lista li label {
@@ -620,6 +602,10 @@ ul {
   .categorias-lista {
     height: 54px;
   }
+
+  .categorias-lista li + li {
+    margin: 0;
+  }
 }
 
 @media (max-width: 890px) {
@@ -629,26 +615,53 @@ ul {
   }
 }
 
-@media (max-width: 770px) {
-  .vitrine h2::after {
-    visibility: visible;
+@media (max-width: 755px) {
+  .categorias-lista li + li {
+    margin: 15px 0;
   }
 
-  /* .vitrine h2:hover ~ .categorias .categorias-lista {
-    left: -100px;
-  } */
+  .categorias-lista {
+    height: 108px;
+  }
 }
 
 @media (max-width: 480px) {
-  .vitrine h2::after {
-    top: 67px;
-    padding: 15px;
+  .categorias-lista li label {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  .categorias-lista li + li {
+    margin: 0;
+  }
+
+  .categorias-lista {
+    height: 85px;
+  }
+
+  .vitrine {
+    padding: 0 0 0 10px;
   }
 }
 
-@media (max-width: 400px) {
-  .vitrine h2 {
-    font-size: 1.6em;
+@media (max-width: 415px) {
+  .categorias-lista li label {
+    font-size: 0.8em;
+    padding: 10px 20px;
+  }
+
+  .categorias-lista {
+    height: 76px;
+  }
+}
+
+@media (max-width: 356px) {
+  .categorias-lista li label {
+    padding: 10px;
+  }
+
+  .categorias-lista {
+    height: 76px;
   }
 }
 
