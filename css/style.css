@@ -585,13 +585,6 @@ ul {
   }
 }
 
-@media (max-width: 890px) {
-  .categorias-lista {
-    width: 100%;
-    border-radius: 20px 0 0 20px;
-  }
-}
-
 @media (max-width: 755px) {
   .categorias-lista li + li {
     margin: 15px 0;
