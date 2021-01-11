@@ -175,20 +175,8 @@ ul {
     background:  #FFE640;
   }
 
-  @keyframes lado {
-    from {
-      left: 0;
-      background: transparent;
-    }
-
-    to {
-      left: -100%;
-    }
-  }
-
   .header input:checked ~ label span:nth-child(2) {
     left: -100%;
-    animation: lado .4s alternate;
   }
 
   .header input:checked ~ label span:nth-child(1) {
@@ -630,7 +618,7 @@ ul {
   }
 }
 
-/*intens das categorias*/
+/*itens das categorias*/
 .categorias-itens {
   display: none;
   grid-template-columns: repeat(3, 1fr);
@@ -640,7 +628,7 @@ ul {
   left: 0;
   top: 150%;
   width: 95%;
-  height: 800px;
+  height: 880px;
   overflow-y: auto;
 }
 
@@ -649,25 +637,24 @@ ul {
   display: grid;
   align-items: center;
   justify-items: center;
-  align-content: center;
   grid-gap: 16px;
   max-width: 230px;
-  height: 200px;
-  padding: 20px 5px;
   border-radius: 20px;
   cursor: pointer;
+  transition: all .4s;
 }
 
 .article img {
   border-radius: 5px;
   max-width: 160px;
+  margin: 30px auto 0 auto;
 }
 
 .article h1 {
   font-family: 'Nunito', sans-serif;
   font-size: 1.25em;
   color: #45464D;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   max-width: 180px;
   text-align: center;
@@ -677,7 +664,7 @@ ul {
   font-family: 'Nunito', sans-serif;
   font-size: 1.8em;
   color: #13141A;
-  margin: 0;
+  margin: 0 auto 30px auto;
 }
 
 .article h2::before {
@@ -689,11 +676,21 @@ ul {
   margin: 0 auto 16px auto;
 }
 
+.article .preco-anterior {
+  text-decoration: line-through;
+  color: #ff3f3f;
+  font-size:  0.8em;
+  text-align: center;
+  margin: 0 auto 16px auto;
+  align-self: center;
+  display: block;
+}
+
 .categorias-lista li input[type="radio"]:checked ~ .categorias-itens {
   display: grid;
 }
 
-/*intens das categorias responsivo*/
+/*itens das categorias responsivo*/
 @media (max-width: 1186px) {
   .categorias-itens {
     top: 140%;
@@ -721,7 +718,7 @@ ul {
   }
 }
 
-/*editar barra de rolagem e fazer javascript*/
+/*editar barra de rolagem*/
 
 /*
 font-family: 'Nunito', sans-serif;

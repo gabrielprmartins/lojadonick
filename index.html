@@ -63,7 +63,7 @@
         <form>
           <article>
             <input type="radio" name="desconto" id="membro" checked>
-            <label for="membro">
+            <label for="membro" onclick="precosMembro()">
             <span>0%</span>
             <img src="assets/categorias/steve.png" alt="Membro">
             <span>Membro</span>
@@ -72,7 +72,7 @@
 
           <article>
             <input type="radio" name="desconto" id="vip">
-            <label for="vip">
+            <label for="vip" onclick="aplicarPromo(10)">
             <span>10%</span>
             <img src="assets/categorias/esqueleto.png" alt="Membro">
             <span>Vip</span>
@@ -81,7 +81,7 @@
 
           <article>
             <input type="radio" name="desconto" id="mvp">
-            <label for="mvp">
+            <label for="mvp" onclick="aplicarPromo(20)">
             <span>20%</span>
             <img src="assets/categorias/enderman.png" alt="Membro">
             <span>Mvp</span>
@@ -90,7 +90,7 @@
 
           <article>
             <input type="radio" name="desconto" id="mvpmais">
-            <label for="mvpmais">
+            <label for="mvpmais" onclick="aplicarPromo(30)">
             <span>30%</span>
             <img src="assets/categorias/creeper.png" alt="Membro">
             <span>Mvp+</span>
@@ -361,5 +361,6 @@
     </div>
   </section>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
