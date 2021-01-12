@@ -279,7 +279,7 @@ ul {
   }
 
   .intro-imagem img {
-    max-width: 280px;
+    max-width: 180px;
   }
 }
 
@@ -572,7 +572,7 @@ ul {
   }
 }
 
-@media (max-width: 755px) {
+@media (max-width: 772px) {
   .categorias-lista li + li {
     margin: 15px 0;
   }
@@ -628,7 +628,7 @@ ul {
   left: 0;
   top: 150%;
   width: 95%;
-  height: 880px;
+  height: 850px;
   overflow-y: auto;
 }
 
@@ -688,6 +688,22 @@ ul {
 
 .categorias-lista li input[type="radio"]:checked ~ .categorias-itens {
   display: grid;
+}
+
+.voltar-categorias{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  font-family: 'Nunito', sans-serif;
+  color: #FFBD24;
+  text-align: center;
+
+}
+
+.voltar-categorias img {
+  transform: rotate(-90deg);
 }
 
 /*itens das categorias responsivo*/
