@@ -287,7 +287,7 @@ img {
 
 /*produtos*/
 .produtos {
-  margin: 60px auto;
+  margin: 60px auto 0 auto;
   background: #3E64FF;
   border-radius: 20px;
   padding: 0px;
@@ -741,12 +741,16 @@ img {
 }
 
 /*como funciona*/
+.como-funciona-bg {
+  padding-top: 60px;
+}
+
 .como-funciona {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
-  margin: 30px auto;  
+  margin: 0px auto 100px auto;  
 }
 
 .como-funciona strong, h1, p, .img-visitar {
@@ -779,10 +783,6 @@ img {
 }
 
 /*como funciona responsivo*/
-@media (max-width: 1032px) {
-  
-}
-
 @media (max-width: 820px) {
   .como-funciona {
     grid-template-columns: 1fr;
@@ -821,6 +821,97 @@ img {
   }
 }
 
+/*sobre mim*/
+.sobre-mim-bg {
+  background: #3E64FF;
+  transform: skewY(-3deg);
+  margin: 30px auto;
+}
+
+.sobre-mim {
+  transform: skewY(3deg);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  padding: 100px 20px;
+}
+
+.sobre-mim strong {
+  color: #FFBD24;
+}
+
+.sobre-mim strong::before {
+  background: #FFBD24;
+}
+
+.sobre-mim h1 {
+  margin: 20px 0;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 3.125em;
+  line-height: 1;
+  color: #FFFFFF;
+}
+
+.sobre-mim p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.4;
+  color: #FFFFFF;
+  margin: 30px 0 32px 0;
+  min-width: 550px;
+}
+
+/*sobre mim responsivo*/
+@media (max-width: 1032px) {
+  .sobre-mim {
+    grid-gap: 30px;
+  }
+
+  .eu {
+    width: 300px;
+  }
+}
+
+@media (max-width: 820px) {
+  .sobre-mim {
+    grid-template-columns: 1fr;
+    margin: 60px auto;
+    padding: 60px 20px;
+  }
+
+  .sobre-mim h1 {
+    font-size: 2.8em;
+  }
+
+  .sobre-mim p {
+    font-size: 1.3em;
+    min-width: 100px;
+  }
+
+  .eu {
+    max-width: 200px;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-mim-bg {
+    transform: skewY(-5deg);
+  }
+
+  .sobre-mim {
+    transform: skewY(5deg);
+  }
+
+  .sobre-mim h1 {
+    font-size: 2.125em;
+  }
+
+  .sobre-mim p {
+    font-size: 1.1735em;
+  }
+}
 
 /*
 font-family: 'Nunito', sans-serif;
