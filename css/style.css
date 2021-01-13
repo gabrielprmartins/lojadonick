@@ -408,7 +408,7 @@ img {
   .promocoes {
     position: absolute;
     left: -230px;
-    transition: all .4s;
+    transition: all .2s;
     border-radius: 0 20px 20px 0;
     padding: 30px 10px;
   }
@@ -462,10 +462,6 @@ img {
 
   .abrir-promocoes:checked ~ .vitrine {
     opacity: 0.7;
-  }
-
-  .abrir-promocoes:checked ~ .vitrine h2::after {
-    animation: mais 1000s alternate infinite;
   }
 }
 
