@@ -784,6 +784,10 @@ img {
 
 /*como funciona responsivo*/
 @media (max-width: 820px) {
+  .como-funciona-bg {
+    padding-top: 30px;
+  }
+
   .como-funciona {
     grid-template-columns: 1fr;
     margin: 30px auto;
