@@ -690,20 +690,8 @@ ul {
   display: grid;
 }
 
-.voltar-categorias{
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-items: center;
-  align-content: center;
-  font-family: 'Nunito', sans-serif;
-  color: #FFBD24;
-  text-align: center;
-
-}
-
-.voltar-categorias img {
-  transform: rotate(-90deg);
+.voltar-categorias {
+  display: none;
 }
 
 /*itens das categorias responsivo*/
@@ -723,6 +711,22 @@ ul {
 
   .article {
     width: 230px;
+  }
+
+  .voltar-categorias {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    font-family: 'Nunito', sans-serif;
+    color: #FFBD24;
+    text-align: center;
+  
+  }
+  
+  .voltar-categorias img {
+    transform: rotate(-90deg);
   }
 }
 
