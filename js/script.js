@@ -1,4 +1,45 @@
-let precos = [];
+// animações
+// debounce
+const debounce = function(func, wait, immediate) {
+    let timeout;
+    return function(...args) {
+      const context = this;
+      const later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      const callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+  
+// animação
+const target = document.querySelectorAll('[data-anime]');
+const animationClass = 'animate';
+  
+function animeScroll() {
+    const windowTop = window.pageYOffset + ((window.innerHeight * 4 / 5));
+    target.forEach(function(element) {
+      if((windowTop) > element.offsetTop) {
+        element.classList.add(animationClass);
+      } else {
+        element.classList.remove(animationClass);
+      }
+    })
+}
+  
+animeScroll();
+  
+if(target.length) {
+    window.addEventListener('scroll', debounce(function() {
+      animeScroll();
+    }, 200));
+}
+
+// aplicar promoções
+const precos = [];
 for (let i = 0; i < 100; i++) {
     precos[i] = window.document.querySelectorAll('#preco')[i].innerHTML;
 }
@@ -17,6 +58,7 @@ function aplicarPromo(porcentagem) {
     }
 }
 
+// promoções de fins de semana
 function promoMembro() {
     const membro = window.document.querySelector('.membro');
     const porcMembro = window.document.querySelector('.porc-membro');
