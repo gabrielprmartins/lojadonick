@@ -510,7 +510,7 @@ img {
 }
 
 .categorias-lista {
-  margin: 20px 0px 0 0;
+  margin: 20px 0px 0px 0px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -607,7 +607,7 @@ img {
   }
 
   .categorias-lista {
-    height: 74px;
+    height: 70px;
   }
 }
 
