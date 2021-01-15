@@ -609,11 +609,11 @@ img {
 @media (max-width: 415px) {
   .categorias-lista li label {
     font-size: 0.8em;
-    padding: 13px 20px 10px 20px;
+    padding: 12px 20px 10px 20px;
   }
 
   .categorias-lista {
-    height: 81px;
+    height: 80px;
   }
 }
 
