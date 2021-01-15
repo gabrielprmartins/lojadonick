@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&family=Nunito:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="promoMembro()">
   <!--header-->
   <header class="header-bg">
     <div class="header container">
@@ -64,8 +64,8 @@
         <form>
           <article>
             <input type="radio" name="desconto" id="membro" checked>
-            <label for="membro" onclick="aplicarPromo(0)">
-            <span>0%</span>
+            <label for="membro" class="membro" onclick="aplicarPromo(0)">
+            <span class="porc-membro">0%</span>
             <img src="assets/categorias/steve.png" alt="Membro">
             <span>Membro</span>
             </label>
@@ -101,7 +101,7 @@
 
         <div class="aviso">
           <strong class="sub sub-aviso">Fique ligado</strong>
-          <p>Todo final de semana haverá descontos de <span>5%</span> para os membros!</p>
+          <p class="p-aviso">Todo final de semana haverá descontos de <span>5%</span> para os membros!</p>
         </div>
       </div>
       <!--vitrine-->
