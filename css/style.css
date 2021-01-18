@@ -210,7 +210,7 @@ img {
 }
 
 /*intro titulo*/
-.intro-titulo h1 {
+.intro-titulo h1, h2 {
   margin: 20px 0;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 3.125em;
@@ -218,7 +218,12 @@ img {
   color: #3E64FF;
 }
 
-.intro-titulo h1 span {
+.intro-titulo h2 {
+  font-size: 2.8em;
+  text-align: start;
+}
+
+.intro-titulo h2 span {
   color: #FFBD24;
 }
 
@@ -274,15 +279,19 @@ img {
   .info-desc {
     font-size: 0.75em;
   }
+
+  .intro-imagem img {
+    max-width: 180px;
+  }
 }
 
 @media (max-width: 480px) {
   .intro-titulo h1 {
     font-size: 2.125em;
   }
-  
-  .intro-imagem img {
-    max-width: 180px;
+ 
+  .intro-titulo h2 {
+    font-size: 2em;
   }
 }
 
